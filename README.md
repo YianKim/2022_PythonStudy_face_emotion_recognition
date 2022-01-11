@@ -6,10 +6,9 @@
 3. https://www.kaggle.com/ashwingupta3012/human-faces (unlabeled)
 
 
-![image](https://user-images.githubusercontent.com/75729975/148865800-8efde425-daba-41ae-95d9-110f6a51569f.png)
-
-
 # ★ 준지도 pseudo labeling : self supervised
+
+![image](https://user-images.githubusercontent.com/75729975/148865800-8efde425-daba-41ae-95d9-110f6a51569f.png)
 
 1. fer2013 + augmentation을 통해 CNN 학습 및 저장
 2. 예측 확률 0.95 이상의 데이터를 추출
