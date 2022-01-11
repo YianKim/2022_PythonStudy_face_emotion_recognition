@@ -32,4 +32,8 @@
 6. 과정 2~4 을 반복
 
 재학습을 통해서 test set의 정확도 소폭 향상 >>> 결과가 0.95가 넘는 데이터 새로 생성
-cnn_base_model : 0.682  >>  cnn_220110_model : 0.687
+
+# accuracy records
+cnn_base_model : 0.682
+cnn_220110_model : 0.687
+cnn_220111_model : 0.692
