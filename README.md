@@ -6,6 +6,11 @@
 3. https://www.kaggle.com/ashwingupta3012/human-faces (unlabeled)
 
 
+# ★ unlabeled 데이터 전처리
+
+![image](https://user-images.githubusercontent.com/75729975/148866954-5914f5fa-7875-4b4b-bab7-b464df7c8c6d.png)
+
+
 # ★ 준지도 pseudo labeling : self supervised
 
 ![image](https://user-images.githubusercontent.com/75729975/148865800-8efde425-daba-41ae-95d9-110f6a51569f.png)
