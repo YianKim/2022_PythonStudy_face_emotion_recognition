@@ -34,6 +34,6 @@
 재학습을 통해서 test set의 정확도 소폭 향상 >>> 결과가 0.95가 넘는 데이터 새로 생성
 
 # accuracy records
-cnn_base_model : 0.682
-cnn_220110_model : 0.687
-cnn_220111_model : 0.692
+1. cnn_base_model : 0.682
+2. cnn_220110_model : 0.687
+3. cnn_220111_model : 0.692
