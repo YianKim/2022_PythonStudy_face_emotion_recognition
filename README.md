@@ -48,6 +48,7 @@
 Gal, Y., & Ghahramani, Z. (2016, June). Dropout as a bayesian approximation: Representing model uncertainty in deep learning. In international conference on machine learning (pp. 1050-1059). PMLR.
 
 어렵지만 대충 요약하면 
+
 ![image](https://user-images.githubusercontent.com/75729975/149254593-66b4a686-dce6-4083-89a2-fc8d5462c76e.png)
 
 1. softmax로 얻어지는 결과가 실제 확률이나 불확실성을 뜻하지 않는다는 것이다. 예를 들어, 고양이 품종에 관한 모델을 만들었을 때, 학습 때 사용하지 않은 새로운 품종의 고양이나 아니면 고양이가 아닌(강아지) input을 넣었을 때에 올바른 대답은 "모른다"인데, 실제로는 실행했을 때 그렇지 않다. 어떻게서든 아무 라벨을 찾아서 갖다주는데, 이는 softmax가 데이터에 대한 confidence이나 확신을 나타낼 수 없다는 것이다.
@@ -72,6 +73,7 @@ Gal, Y., & Ghahramani, Z. (2016, June). Dropout as a bayesian approximation: Rep
 연구에서 사용한 데이터는 실제로 규격화 및 전처리를 거친 데이터(얼굴의 특정 지점이 거의 비슷한 area에 위치)였기 때문에 RNN이 잘 먹혔던 것 같음.
 
 a. 같은 목적이어도 형식이 다르면 적합한 모델도 달라질 수 있음
+
 b. CNN-RNN을 잘 활용하기 위해서는 얼굴 포인트의 위치를 정렬해야 할 필요가 있다?
 
 
