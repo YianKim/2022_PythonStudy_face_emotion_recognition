@@ -61,6 +61,12 @@ Gal, Y., & Ghahramani, Z. (2016, June). Dropout as a bayesian approximation: Rep
 실제로, Mukherjee, S., & Awadallah, A. H. (2020)은 model을 self training 하는 데에 MC dropout을 통한 unceatainty를 활용함
 
 
++ 연결하여, MC dropout이 적용된 모델을 실제 예측에도 사용 할 예정이다.
+
+dropout이 적용되기 때문에 단일 예측 결과는 좋지 못할 것으로 예상되나, MC_dropout 을 통한 n개의 test 결과의 평균(soft voting)이 정규분포에 근사한 대수의 법칙과 표본 평균의 분산이 sigma/sqrt(n)임에 따라 저분산의 좋은 예측값을 내줄 것으로 기대할 수 있다.
+
+
+
 # CNN-RNN 모델 활용?
 1. CNN-RNN 모형을 통한 표정 인식; CNN +맥락을 파악할 수 있는 RNN(IRNN)의 장점 이용 => high accuracy
 2. 사용한 데이터 : JAFFE, MMI dataset >>> 일반적인 얼굴 사진 X 실험을 위해서 계획되고 규격화된 얼굴 사진임.
