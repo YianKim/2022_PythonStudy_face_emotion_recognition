@@ -58,6 +58,9 @@ Gal, Y., & Ghahramani, Z. (2016, June). Dropout as a bayesian approximation: Rep
 3. 기존 dropout은 train 과정에서 적용, test(predict)과정에서는 모든 노드를 사용하여 예측 >>> 불확실성의 검증을 통해 self training의 대상이 되는 낮은 불확실성의 unlabeled data를 고르기 위해서 Monte-Carlo Dropout을 사용하였다. 저장된 같은 모델을 사용해도 매번 예측 결과가 달라지며, 이때의 결과들의 분포는 정규분포에 근사함.
 
 
+실제로, Mukherjee, S., & Awadallah, A. H. (2020)은 model을 self training 하는 데에 MC dropout을 통한 unceatainty를 활용함
+
+
 # CNN-RNN 모델 활용?
 1. CNN-RNN 모형을 통한 표정 인식; CNN +맥락을 파악할 수 있는 RNN(IRNN)의 장점 이용 => high accuracy
 2. 사용한 데이터 : JAFFE, MMI dataset >>> 일반적인 얼굴 사진 X 실험을 위해서 계획되고 규격화된 얼굴 사진임.
