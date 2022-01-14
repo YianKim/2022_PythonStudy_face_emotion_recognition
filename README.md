@@ -67,6 +67,13 @@ Gal, Y., & Ghahramani, Z. (2016, June). Dropout as a bayesian approximation: Rep
 dropout이 적용되기 때문에 단일 예측 결과는 좋지 못할 것으로 예상되나, MC_dropout 을 통한 n개의 test 결과의 평균(soft voting)이 정규분포에 근사한 대수의 법칙과 표본 평균의 분산이 sigma/sqrt(n)임에 따라 저분산의 좋은 예측값을 내줄 것으로 기대할 수 있다.
 
 
+# 단순 self training의 한계
+
+앞서 진행한 것 처럼,,, labeled data로 훈련 후에, unlabeled data를 MC dropout을 통해 uncertainty가 작은(맞추기 쉬운) data에 labeling을 하여 self train 시키는 방법은 문제가 있었다.
+
+1. 그냥 새로운 데이터들로만 학습시키기에는 Catastrophic forgeting 문제가 존재한다. 새로운 데이터 학습으로 인해 이전 학습을 잊어버리면 성능이 크게 떨어진다.
+2. 새로운 데이터와 이전의 데이터를 통으로 학습시키기에는 memory 문제와, over fitting의 문제가 있었다. 물론 1. 보다 정확도는 훨씬 좋았으며, 실제로 학습을 진행할 때도 소폭 성능 향상이 있었으나, 학습했던 데이터를 항상 기억할 수는 없고, 항상 학습에 활용할 수는 없기 때문에 통으로 학습시키는 것은 비효율적이다.
+
 
 # CNN-RNN 모델 활용?
 1. CNN-RNN 모형을 통한 표정 인식; CNN +맥락을 파악할 수 있는 RNN(IRNN)의 장점 이용 => high accuracy
@@ -88,9 +95,25 @@ b. CNN-RNN을 잘 활용하기 위해서는 얼굴 포인트의 위치를 정렬
 
 
 # accuracy records
+
+<1차>
+
 1. cnn_base_model : 0.682
 2. cnn_220110_model : 0.687
 3. cnn_220111_model : 0.692
 4. cnn_220112_model : 0.688
+
 ******
-5. cnn_base_model_v2 : 0.691
+
+<2차 : MC dropout을 이용한 additional train data selection>
+
+MCdropout + bagging(30) cnn v2
+
+1. 67~68%(labeled+aug) 
+2. 67~68%(1_self_train) 
+3. 68~69%(2_self_train) 
+4. 67~68%(3_self_train)
+
+******
+
+<3차 : Catastrophic forgetting에 대한 더 나은 방법 모색>
