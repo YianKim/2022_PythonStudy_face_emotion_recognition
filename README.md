@@ -15,12 +15,12 @@
 6. 과정 5) 반복 ★
 
 
-# ★ unlabeled 데이터 전처리
+# unlabeled 데이터 전처리
 
 ![image](https://user-images.githubusercontent.com/75729975/148866954-5914f5fa-7875-4b4b-bab7-b464df7c8c6d.png)
 
 
-# ★ 준지도 pseudo labeling : self supervised
+# 준지도 pseudo labeling : self supervised
 
 ![image](https://user-images.githubusercontent.com/75729975/148865800-8efde425-daba-41ae-95d9-110f6a51569f.png)
 
@@ -34,7 +34,7 @@
 재학습을 통해서 test set의 정확도 소폭 향상 >>> 결과가 0.95가 넘는 데이터 새로 생성
 
 
-# ★ 데이터(라벨)의 불균형
+# 데이터(라벨)의 불균형
 
 기존 fer2013은 데이터가 어느정도 균형 (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral. The Disgust expression has the minimal number of images – 600, while other labels have nearly 5,000 samples each.)
 
