@@ -75,6 +75,23 @@ dropout이 적용되기 때문에 단일 예측 결과는 좋지 못할 것으�
 2. 새로운 데이터와 이전의 데이터를 통으로 학습시키기에는 memory 문제와, over fitting의 문제가 있었다. 물론 1. 보다 정확도는 훨씬 좋았으며, 실제로 학습을 진행할 때도 소폭 성능 향상이 있었으나, 학습했던 데이터를 항상 기억할 수는 없고, 항상 학습에 활용할 수는 없기 때문에 통으로 학습시키는 것은 비효율적이다.
 
 
+
+# 재학습시 기존데이터와 새로운 데이터를 어떻게 적용?
+
+Catastrophic forgeting의 극복; Continuous Learning in Single Incremental Task : 분포의 변화가 있는 데이터를 input으로 받는, 동일한 task에서의 지속적인 학습?
+
+https://en.wikipedia.org/wiki/Catastrophic_interference
+
+https://www.sciencedirect.com/science/article/pii/S0893608019300231
+
+https://www.sciencedirect.com/science/article/pii/S0893608019300838
+
+1. 사전 학습된 데이터를 재학습 과정에서 단순히 또 사용하는 방법
+2. 사전 학습된 데이터에 대해서 샘플링 후 재학습 과정에서 사용하는 방법
+3. 사전 학습된 데이터를 GAN모델로 저장하고 재학습 과정에서 생성하여 사용하는 방법
+
+
+
 # CNN-RNN 모델 활용?
 1. CNN-RNN 모형을 통한 표정 인식; CNN +맥락을 파악할 수 있는 RNN(IRNN)의 장점 이용 => high accuracy
 2. 사용한 데이터 : JAFFE, MMI dataset >>> 일반적인 얼굴 사진 X 실험을 위해서 계획되고 규격화된 얼굴 사진임.
