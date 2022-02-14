@@ -1,4 +1,4 @@
-# 2022_PythonStudy_face_emotion_recognition
+# 2022_uncertainty_aware_semisupervise
 
 사용한 데이터 (kaggle)
 1. https://www.kaggle.com/msambare/fer2013 (labeled)
@@ -146,3 +146,12 @@ MCdropout + bagging(30) cnn v2
 ******
 
 <3차 : Catastrophic forgetting에 대한 더 나은 방법 모색>
+
+
+
+******
+******
+******
+
+기존에 표정 이미지는 여러가지 시도를 해보기에 데이터가 부족(도메인이 동일한 사진을 구하기 힘듬)하고 처리가 오래걸림
+간단한 fashion mnist를 사용해보기.
